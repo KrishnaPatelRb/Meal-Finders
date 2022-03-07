@@ -68,3 +68,10 @@ text-align: center;
   padding: 2%;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+#ingredients{
+  background-color:antiquewhite;
+  margin: 5px;
+  color: black;
+
+}

@@ -45,11 +45,12 @@ export default function Meal() {
       <button
         className="button"
         onClick={() => {
+          if(search){
           setInput(true);
           userInput.current.focus();
-
           updateSearch();
           setMealVisible([]);
+          }
         }}
       >
         Search
@@ -125,99 +126,95 @@ export default function Meal() {
               </span>
             </div>
             <div style={{ marginLeft: "20%", marginRight: "20%" }}>
-              {list.strInstructions}
+              Recipe - {list.strInstructions}
             </div>
             <h2>Ingredients</h2>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "auto auto auto auto",
-                justifyContent: "center",
-                marginLeft: "20%",
-                marginRight: "20%"
-              }}
-            >
-              <span>
+           
+              <span id="ingredients" >
                 {list.strIngredient1}
                 {list.strMeasure1}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient2}
                 {list.strMeasure2}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient3}
                 {list.strMeasure3}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient4}
                 {list.strMeasure4}
               </span>
-              <span>
+              <br/>
+              <span id="ingredients" >
                 {list.strIngredient5}
                 {list.strMeasure5}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient6}
                 {list.strMeasure6}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient7}
                 {list.strMeasure7}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient8}
                 {list.strMeasure8}
               </span>
-              <span>
+              <br/>
+              <span id="ingredients" >
                 {list.strIngredient9}
                 {list.strMeasure9}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient10}
                 {list.strMeasure10}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient11}
                 {list.strMeasure11}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient12}
                 {list.strMeasure12}
               </span>
-              <span>
+              <br/>
+              <span id="ingredients" >
                 {list.strIngredient13}
                 {list.strMeasure13}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient14}
                 {list.strMeasure14}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient15}
                 {list.strMeasure15}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient16}
                 {list.strMeasure16}
               </span>
-              <span>
+              <br/>
+              <span id="ingredients" >
                 {list.strIngredient17}
                 {list.strMeasure17}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient18}
                 {list.strMeasure18}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient19}
                 {list.strMeasure19}
               </span>
-              <span>
+              <span id="ingredients" >
                 {list.strIngredient20}
                 {list.strMeasure20}
               </span>
-            </div>
+            {/* </div> */}
           </>
         );
       })}
