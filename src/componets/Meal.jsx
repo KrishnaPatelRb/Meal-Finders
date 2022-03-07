@@ -19,14 +19,18 @@ export default function Meal() {
         setPending(false);
         const mealData = data.meals;
         setMealContainer(mealData);
+        
       });
   }, [search]);
 
   function updateSearch() {
-    function searchUpadate() {
+  
+    if(userInput.current.value===""){
+      setSearch(".")
+    }
+    else{
       setSearch(userInput.current.value);
     }
-    searchUpadate();
   }
   
 
@@ -45,6 +49,7 @@ export default function Meal() {
       <button
         className="button"
         onClick={() => {
+          
           if(search){
           setInput(true);
           userInput.current.focus();
